@@ -1,0 +1,5 @@
+.sidebar .nav > li.to-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
