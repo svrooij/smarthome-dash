@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">MQTT Settings</h4>
+                <p class="category">Your mqtt settings are saved <strong>unencrypted</strong> to the 'localStorage'. These settings are never transmitted to an other server then the server you're connecting to. </p>
+            </div>
+            <form class="content" #mqttForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="protocol">Protocol</label>
+                            <select class="form-control" id="protocol" [(ngModel)]="model.protocol" name="protocol">
+                              <option value="ws">ws://</option>
+                              <option value="wss">wss:// (with SSL)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="hostname">Hostname</label>
+                            <input type="text" class="form-control border-input" placeholder="127.0.0.1" id="hostname" required [(ngModel)]="model.hostname" name="hostname">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="port">Port</label>
+                            <input type="text" class="form-control border-input" placeholder="1884" id="port" required [(ngModel)]="model.port" name="port">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control border-input" placeholder="optional username" id="username" [(ngModel)]="model.username" name="username">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control border-input" placeholder="optional password" id="password" [(ngModel)]="model.password" name="password">
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <p>
+                  <button type="submit" class="btn btn-primary btn-lg"><i class="ti-save"></i> Save settings and reconnect</button>
+                    </p>
+                  <p>
+                  <button type="button" class="btn btn-danger" (click)="clear()"><i class="ti-trash"></i> remove all settings</button>
+                  </p>
+                </div>
+              </form>
+        </div>
+  </div>
+  </div>
+  
+</div>

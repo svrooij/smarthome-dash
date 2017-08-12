@@ -17,6 +17,7 @@ export const ROUTES: RouteInfo[] = [
     // { path: 'icons', title: 'Icons',  icon:'ti-pencil-alt2', class: '' },
     { path: 'maps', title: 'Maps',  icon:'ti-map', class: '' },
     { path: 'notifications', title: 'Notifications',  icon:'ti-bell', class: '' },
+    { path: 'settings', title: 'Settings',  icon:'ti-settings', class: '' },
     //{ path: 'upgrade', title: 'Upgrade to PRO',  icon:'ti-export', class: 'active-pro' },
 ];
 

@@ -27,13 +27,13 @@
                     <li><a href="#">Another notification</a></li>
                   </ul>
             </li> -->
-            <li *ngIf="isNotMobileMenu()">
-                <a href="#">
+            <!-- <li *ngIf="isNotMobileMenu()">
+                <a href="settings">
 					<i class="ti-settings"></i>
 					<p>Settings</p>
                 </a>
             </li>
-            <li class="divider" *ngIf="isNotMobileMenu()"></li>
+            <li class="divider" *ngIf="isNotMobileMenu()"></li> -->
         <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
             <a [routerLink]="[menuItem.path]">
                 <i class="{{menuItem.icon}}"></i>
