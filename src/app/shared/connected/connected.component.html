@@ -1,0 +1,2 @@
+<span *ngIf="(mqttState | async) == 2; else notconnected;" class="text-success" title="You are successfully connected to a MQTT server."><i class="ti-link"></i> connected</span>
+<ng-template #notconnected><span class="text-danger" title="You're not connected to a MQTT server!"><i class="ti-unlink"></i> disconnected</span></ng-template>

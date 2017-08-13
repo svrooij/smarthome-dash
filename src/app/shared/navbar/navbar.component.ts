@@ -1,9 +1,8 @@
 import { Component, OnInit, Renderer, ViewChild, ElementRef } from '@angular/core';
-import { ROUTES } from '../../sidebar/sidebar.component';
+import { ROUTES } from '../sidebar/sidebar.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { MqttService, MqttConnectionState } from 'ngx-mqtt';
-import { Observable } from "rxjs/Observable";
+
 
 @Component({
     moduleId: module.id,
@@ -18,15 +17,13 @@ export class NavbarComponent implements OnInit{
     private nativeElement: Node;
     private toggleButton;
     private sidebarVisible: boolean;
-    public mqttConnected: Observable<MqttConnectionState>;
 
     @ViewChild("navbar-cmp") button;
 
-    constructor(location:Location, private renderer : Renderer, private element : ElementRef,private mqttService: MqttService) {
+    constructor(location:Location, private renderer : Renderer, private element : ElementRef) {
         this.location = location;
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
-        this.mqttConnected = this.mqttService.state;
     }
 
     ngOnInit(){

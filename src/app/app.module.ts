@@ -5,9 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
-import { SidebarModule } from './sidebar/sidebar.module';
-import { FooterModule } from './shared/footer/footer.module';
-import { NavbarModule} from './shared/navbar/navbar.module';
 import { NguiMapModule} from '@ngui/map';
 import { MqttModule, MqttService } from 'ngx-mqtt';
 
@@ -16,6 +13,10 @@ import { MapsComponent }   from './maps/maps.component';
 import { NotificationsComponent }   from './notifications/notifications.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsService } from './settings/settings.service';
+import { ConnectedComponent } from './shared/connected/connected.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -23,15 +24,16 @@ import { SettingsService } from './settings/settings.service';
     DashboardComponent,
     MapsComponent,
     NotificationsComponent,
-    SettingsComponent
+    SettingsComponent,
+    ConnectedComponent,
+    NavbarComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
     FormsModule,
-    SidebarModule,
-    NavbarModule,
-    FooterModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyBr-tgUtpm8cyjYVQDrjs8YpZH7zBNWPuY'}),
     MqttModule.forRoot({
       provide: MqttService,
