@@ -13,10 +13,13 @@ import { MapsComponent }   from './maps/maps.component';
 import { NotificationsComponent }   from './notifications/notifications.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsService } from './settings/settings.service';
+import { DeviceService } from "./shared/device/device.service";
 import { ConnectedComponent } from './shared/connected/connected.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { DeviceComponent } from './shared/device/device.component';
+import { SecurityComponent } from './security/security.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     ConnectedComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    DeviceComponent,
+    SecurityComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     })
 
   ],
-  providers: [SettingsService],
+  providers: [SettingsService,DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
