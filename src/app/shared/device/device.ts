@@ -5,19 +5,23 @@ export class Device {
     constructor(
         public topic: string,
         public kind: string = 'generic',
-        private payload: any
+        private _payload: any
     ){
         this.payloadSubject = new BehaviorSubject(this.payload);
     }
 
     private payloadSubject: BehaviorSubject<any>;
     public updatePayload(payload: string) {
-        this.payload = Device.parsePayload(payload);
+        this._payload = Device.parsePayload(payload);
         this.payloadSubject.next(this.payload);
     }
     
     public get Payload() : Observable<any> {
         return this.payloadSubject.asObservable();
+    }
+
+    public get payload() : any {
+        return this._payload;
     }
 
     public get iconClass(): string {
