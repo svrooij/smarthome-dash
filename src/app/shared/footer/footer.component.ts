@@ -6,6 +6,6 @@ import { Component, HostBinding } from '@angular/core';
     templateUrl: 'footer.component.html'
 })
 
-export class FooterComponent{
-    test : Date = new Date();
+export class FooterComponent {
+    test: Date = new Date();
 }

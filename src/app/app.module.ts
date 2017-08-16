@@ -8,12 +8,12 @@ import { AppRoutes } from './app.routing';
 import { NguiMapModule} from '@ngui/map';
 import { MqttModule, MqttService } from 'ngx-mqtt';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { MapsComponent }   from './maps/maps.component';
-import { NotificationsComponent }   from './notifications/notifications.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MapsComponent } from './maps/maps.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingsService } from './settings/settings.service';
-import { DeviceService } from "./shared/device/device.service";
+import { DeviceService } from './shared/device/device.service';
 import { ConnectedComponent } from './shared/connected/connected.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -46,7 +46,7 @@ import { SecurityComponent } from './security/security.component';
     })
 
   ],
-  providers: [SettingsService,DeviceService],
+  providers: [SettingsService, DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

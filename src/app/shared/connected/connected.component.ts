@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MqttService, MqttConnectionState } from 'ngx-mqtt';
-import { Observable } from "rxjs/Observable";
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-connected',
