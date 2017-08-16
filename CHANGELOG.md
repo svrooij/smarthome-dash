@@ -1,5 +1,11 @@
-# CHANGE LOG
+# CHANGELOG
 
-## [1.0.0] 2017-06-27
+## [0.1.0] 2017-08-16
 
-### Initial Release
+This is the initial version of Smarthome Dash.
+
+- Settings screen
+- Persistent settings
+- Device services with Observable DeviceList
+- Device with Observable payload
+- Code clean-up from the design
