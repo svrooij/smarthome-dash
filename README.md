@@ -1,6 +1,7 @@
 # Smarthome dash
-[![version][version-badge]][CHANGELOG]
-[![license][license-badge]][LICENSE]
+
+[![version](https://img.shields.io/badge/version-0.1.0-blue.svg)](./CHANGELOG.md)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 [![Paypal donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://✌️.tk/beer)
 
 ![Screenshot security](./screenshot-security.png)
