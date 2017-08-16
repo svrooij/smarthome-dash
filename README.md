@@ -10,7 +10,7 @@ This projects aims to create a dashboard for your Home Automation system. It con
 
 ## Connection settings
 
-You can input your connection settings in the settings screen, these settings will be saved to the browsers `localStorage`, see [setting.service.ts](./src/app/settings/settings.serrvice.ts). These settings are NEVER transmitted to any other server, then your own mqtt server.
+You can input your connection settings in the settings screen, these settings will be saved to the browsers `localStorage`, see [setting.service.ts](./src/app/settings/settings.service.ts). These settings are NEVER transmitted to any other server, then your own mqtt server.
 
 ## MQTT Smarthome
 
