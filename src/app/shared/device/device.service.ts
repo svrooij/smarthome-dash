@@ -52,4 +52,12 @@ export class DeviceService {
     return filtered;
   }
 
+  public sortByLastChange (a: Device, b: Device) {
+    if (a.lastChange > b.lastChange) {
+      return -1;
+    } else if (a.lastChange < b.lastChange) {
+      return 1;
+    }
+    return 0;
+  }
 }
