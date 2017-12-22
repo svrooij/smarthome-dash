@@ -20,6 +20,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { DeviceComponent } from './shared/device/device.component';
 import { SecurityComponent } from './security/security.component';
+import { ClimateComponent } from './climate/climate.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SecurityComponent } from './security/security.component';
     FooterComponent,
     SidebarComponent,
     DeviceComponent,
-    SecurityComponent
+    SecurityComponent,
+    ClimateComponent
   ],
   imports: [
     BrowserModule,

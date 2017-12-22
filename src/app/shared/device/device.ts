@@ -10,6 +10,8 @@ export class Device {
         let kind = 'generic';
         if (message.topic.indexOf('magnet') > -1) {
             kind = 'magnet';
+        } else if (message.topic.indexOf('thermostat') > -1 && !message.topic.endsWith('temp')) {
+            kind = 'thermostat';
         }
 
         const device =  new Device(message.topic, kind, Device.parsePayload(message.payload.toString()));
@@ -53,6 +55,8 @@ export class Device {
             case 'magnet':
                 if (this.payload.val === 'closed') { return 'ti-lock'; }
                 return 'ti-unlock';
+            case 'thermostat':
+                return 'ti-stats-up'
             default:
                 return 'ti-more';
 
@@ -89,7 +93,7 @@ export class Device {
         if (this.payload && this.payload.name) {
             return this.payload.name;
         }
-        return this.topic.substr(this.topic.lastIndexOf('/'));
+        return this.topic.substr(this.topic.lastIndexOf('/') + 1);
     }
 
 }

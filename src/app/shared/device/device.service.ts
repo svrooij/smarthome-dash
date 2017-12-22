@@ -54,8 +54,17 @@ export class DeviceService {
 
   public sortByLastChange (a: Device, b: Device) {
     if (a.lastChange > b.lastChange) {
-      return -1;
+      return 1;
     } else if (a.lastChange < b.lastChange) {
+      return -1;
+    }
+    return 0;
+  }
+
+  public sortByName (a: Device, b: Device) {
+    if (a.name > b.name) {
+      return -1;
+    } else if (a.name < b.name) {
       return 1;
     }
     return 0;

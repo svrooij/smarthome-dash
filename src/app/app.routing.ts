@@ -5,6 +5,7 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SecurityComponent } from './security/security.component';
+import { ClimateComponent } from './climate/climate.component';
 
 export const AppRoutes: Routes = [
     {
@@ -19,6 +20,10 @@ export const AppRoutes: Routes = [
     {
         path: 'security',
         component: SecurityComponent
+    },
+    {
+        path: 'climate',
+        component: ClimateComponent
     },
     {
         path: 'maps',
