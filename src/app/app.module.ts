@@ -1,11 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
-import { NguiMapModule} from '@ngui/map';
+import { AgmCoreModule } from '@agm/core';
 import { MqttModule, MqttService } from 'ngx-mqtt';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -39,7 +39,9 @@ import { SecurityComponent } from './security/security.component';
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyBr-tgUtpm8cyjYVQDrjs8YpZH7zBNWPuY'}),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBr-tgUtpm8cyjYVQDrjs8YpZH7zBNWPuY'
+    }),
     MqttModule.forRoot({
       provide: MqttService,
       useFactory: SettingsService.mqttServiceFactory
