@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DeviceService } from '../shared/device/device.service';
-import { Device } from '../shared/device/device';
+import { Device } from '../shared/device';
+import { DeviceService } from '../shared/device/device.service'
 
 @Component({
   selector: 'app-climate',
@@ -14,7 +14,7 @@ export class ClimateComponent implements OnInit {
   ngOnInit() {
     this.deviceService.allDevices.subscribe(() => {
       this.devices = this.deviceService.getByKind('thermostat')
-        .sort(this.deviceService.sortByName);
+        .sort(DeviceService.sortByName);
     });
     console.log('Got climate devices ', this.devices.length);
   }

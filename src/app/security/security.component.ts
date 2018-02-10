@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DeviceService } from '../shared/device/device.service';
-import { Device } from '../shared/device/device';
+import { Device } from '../shared/device/';
+import { DeviceService } from '../shared/device/device.service'
 
 @Component({
   selector: 'app-security',
@@ -17,7 +17,7 @@ export class SecurityComponent implements OnInit {
   ngOnInit() {
     this.deviceService.allDevices.subscribe(() => {
       this.devices = this.deviceService.getByKind('magnet')
-        .sort(this.deviceService.sortByLastChange);
+        .sort(DeviceService.sortByLastChange);
     });
     console.log('Got security devices ', this.devices.length);
   }
