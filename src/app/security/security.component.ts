@@ -16,7 +16,7 @@ export class SecurityComponent implements OnInit {
 
   ngOnInit() {
     this.deviceService.allDevices.subscribe(() => {
-      this.devices = this.deviceService.getByKind('magnet')
+      this.devices = this.deviceService.getByKind('magnet').concat(this.deviceService.getByKind('pir'))
         .sort(DeviceService.sortByLastChange);
     });
     console.log('Got security devices ', this.devices.length);

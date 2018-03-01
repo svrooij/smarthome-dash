@@ -1,4 +1,4 @@
-import { Device, MagnetDevice, ThermostatDevice } from '.'
+import { Device, MagnetDevice, ThermostatDevice, PirDevice } from '.'
 import { MqttMessage } from 'ngx-mqtt';
 
 export class DeviceCreator {
@@ -7,6 +7,8 @@ export class DeviceCreator {
             return new MagnetDevice(message.topic, message.payload.toString())
         } else if (message.topic.indexOf('thermostat') > -1 && !message.topic.endsWith('temp')) {
             return new ThermostatDevice(message.topic, message.payload.toString())
+        } else if(message.topic.indexOf('motion') > -1) {
+            return new PirDevice(message.topic, message.payload.toString())
         }
 
         return new Device(message.topic, message.payload.toString())
